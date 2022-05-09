@@ -229,11 +229,11 @@ function updateChart(year) {
   };
   var moveTooltip = function (d) {
     tooltip
-      .style("left", d3.mouse(this)[0] + 30 + "px")
-      .style("top", d3.mouse(this)[1] + 30 + "px");
+      .style("left", d3.mouse(this)[0] + 60 + "px")
+      .style("top", d3.mouse(this)[1] + 60 + "px");
   };
   var hideTooltip = function (d) {
-    tooltip.transition().duration(2000).style("opacity", 0);
+    tooltip.transition().duration(200).style("opacity", 0);
   };
 
   // Create an update selection
@@ -262,7 +262,7 @@ function updateChart(year) {
     .style("stroke", "#000")
     .on("mouseover", showTooltip)
     .on("mousemove", moveTooltip)
-    //.on("mouseleave", hideTooltip);
+    .on("mouseleave", hideTooltip);
 
   bubble.exit().remove();
 }
