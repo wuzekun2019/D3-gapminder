@@ -1,4 +1,5 @@
 // Creates a bootstrap-slider element
+//Shahin
 $("#yearSlider").slider({
     tooltip: 'always',
     tooltip_position:'bottom'
