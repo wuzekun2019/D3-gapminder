@@ -1,16 +1,19 @@
 // Creates a bootstrap-slider element
 
-$("#yearSlider").slider({
-  tooltip: "always",
-  tooltip_position: "bottom",
-});
-// Listens to the on "change" event for the slider
-$("#yearSlider").on("change", function (event) {
-  // Update the chart on the new value
-  updateChart(event.value.newValue);
-});
+// $("#yearSlider").slider({
+//   tooltip: "always",
+//   tooltip_position: "bottom",
+// });
+// // Listens to the on "change" event for the slider
+// $("#yearSlider").on("change", function (event) {
+//   // Update the chart on the new value
+//   updateChart(event.value.newValue);
+// });
 
 // Color mapping based on continents
+
+var autoPlayStatus = true;
+
 var contintentColors = {
   Asia: "#fc5a74",
   Europe: "#fee633",
@@ -108,6 +111,14 @@ d3.csv(
       });
     };
 
+    d3.select("#yearSlider").on("input", function (d) {
+      updateChart(this.value);
+    });
+
+    d3.select("#autoplay").on("click", function (d) {
+      autoPlay();
+    });
+
     svg
       .append("g")
       .attr("class", "xAxis")
@@ -148,8 +159,26 @@ d3.csv(
 
     //yearLabel.text(year);
     updateChart(1998);
+    //autoPlay();
   }
 );
+
+function autoPlay() {
+  if (autoPlayStatus) {
+    autoPlayStatus = false;
+    let count = 0;
+    let func = function (e) {
+      updateChart(1998 + count);
+      d3.select("#yearSlider").attr("value", 1998 + count);
+      count++;
+      if (count > 17) {
+        timer.stop();
+        autoPlayStatus = true;
+      } //16
+    };
+    var timer = d3.interval(func, 500);
+  }
+}
 
 // d3.csv('./data/gapminder.csv',
 //     function(d){
@@ -229,35 +258,10 @@ d3.csv(
 
 //         updateChart(1952);
 //     });
-
-function setYear(year) {
-  yearLabel.text(year);
-}
-
 function updateChart(year) {
   // **** Update the chart based on the year here ****
-  // svg
-  //   .append("text")
-  //   .attr("x", 70)
-  //   .attr("font-family", "Helvetica Neue, Arial")
-  //   .attr("font-weight", 500)
-  //   .attr("font-size", 80)
-  //   .attr("y", 600)
-  //   .text(year)
-  //   .attr("alignment-baseline", "middle")
-  //   .attr("fill", function (d) {
-  //     return d3.select(this).moveToBack();
-  //   })
-  //   .attr("fill", function (d) {
-  //     d3.select(this).transition().duration(2000).style("opacity", 0);
-  //   })
-  //   .attr("fill", "#ccc");
 
-  // d3.selectAll("text").on("mouseover", function (d) {
-  //   d3.select(this).moveToBack();
-  // });
-
-  setYear(year);
+  yearLabel.text(year);
 
   var tooltip = d3
     .select("#main")
@@ -309,7 +313,7 @@ function updateChart(year) {
     .style("fill", function (d) {
       return tmzColors[d.tmz];
     })
-    .style("stroke", "#000")
+    .style("stroke", "#00")
     .on("mouseover", showTooltip)
     .on("mousemove", moveTooltip)
     .on("mouseleave", hideTooltip);

@@ -39,9 +39,10 @@
         </svg>
     </div>
     <div style="padding: 4px 30px;">
-        <input type="button" value="Play" style="margin-right:6px;width: 80px;">
+        <input type="button" id="autoplay" value="Play" style="margin-right:6px;width: 80px;">
         <label for="yearSlider" style="margin-right:6px;">1998</label>
-        <input id="yearSlider" type="text" data-slider-min="1998" data-slider-max="2015" data-slider-step="1" data-slider-value="1998" style="width: 800px;"/>
+        <input type="range" name="yearSlider" id="yearSlider" min="1998" max="2015" value="1998" style="width: 800px;">
+        <!-- <input id="yearSlider" type="text" data-slider-min="1998" data-slider-max="2015" data-slider-step="1" data-slider-value="1998" style="width: 800px;"/> -->
         <label for="yearSlider"  style="margin-left:6px;">2015</label>
     </div>
 </body>
