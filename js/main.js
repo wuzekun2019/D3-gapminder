@@ -176,7 +176,7 @@ function autoPlay() {
         autoPlayStatus = true;
       } //16
     };
-    var timer = d3.interval(func, 1000);
+    var timer = d3.interval(func, 1200);
   }
 }
 
@@ -263,10 +263,6 @@ function updateChart(year) {
   // **** Update the chart based on the year here ****
 
   yearLabel.text(year);
-
-  const transition = (selection) => {
-    chartG.selectAll(".bubbles").transition().duration(500);
-  };
 
   var tooltip = d3
     .select("#main")
