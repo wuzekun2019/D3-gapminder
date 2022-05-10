@@ -258,10 +258,15 @@ function autoPlay() {
 
 //         updateChart(1952);
 //     });
+
 function updateChart(year) {
   // **** Update the chart based on the year here ****
 
   yearLabel.text(year);
+
+  const transition = (selection) => {
+    chartG.selectAll(".bubbles").transition().duration(500);
+  };
 
   var tooltip = d3
     .select("#main")
@@ -277,7 +282,16 @@ function updateChart(year) {
     tooltip.transition().duration(200);
     tooltip
       .style("opacity", 1)
-      .html("State: " + d.state + "<br /> Fatality: " + d.fatality + "<br /> Hospitalization: " + d.hospitalization + "<br /> Illness: " + d.illness)
+      .html(
+        "State: " +
+          d.state +
+          "<br /> Fatality: " +
+          d.fatality +
+          "<br /> Hospitalization: " +
+          d.hospitalization +
+          "<br /> Illness: " +
+          d.illness
+      )
       .style("left", d3.mouse(this)[0] + 30 + "px")
       .style("top", d3.mouse(this)[1] + 30 + "px");
   };
@@ -299,8 +313,14 @@ function updateChart(year) {
 
   var bubbleEnter = bubble.enter().append("circle").attr("class", "bubbles");
 
+  bubbleEnter
+    .on("mouseover", showTooltip)
+    .on("mousemove", moveTooltip)
+    .on("mouseleave", hideTooltip);
+
   bubble
     .merge(bubbleEnter)
+    .transition()
     .attr("cx", function (d) {
       return xScale(d.hospitalization);
     })
@@ -313,10 +333,7 @@ function updateChart(year) {
     .style("fill", function (d) {
       return tmzColors[d.tmz];
     })
-    .style("stroke", "#00")
-    .on("mouseover", showTooltip)
-    .on("mousemove", moveTooltip)
-    .on("mouseleave", hideTooltip);
+    .style("stroke", "#00");
 
   bubble.exit().remove();
 }
