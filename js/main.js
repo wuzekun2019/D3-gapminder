@@ -176,7 +176,7 @@ function autoPlay() {
         autoPlayStatus = true;
       } //16
     };
-    var timer = d3.interval(func, 500);
+    var timer = d3.interval(func, 1000);
   }
 }
 
@@ -277,7 +277,7 @@ function updateChart(year) {
     tooltip.transition().duration(200);
     tooltip
       .style("opacity", 1)
-      .html("State: " + d.state + "<br /> Year:" + d.year)
+      .html("State: " + d.state + "<br /> Fatality: " + d.fatality + "<br /> Hospitalization: " + d.hospitalization + "<br /> Illness: " + d.illness)
       .style("left", d3.mouse(this)[0] + 30 + "px")
       .style("top", d3.mouse(this)[1] + 30 + "px");
   };
