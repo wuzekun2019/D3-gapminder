@@ -99,6 +99,15 @@ d3.csv(
 
     var yAxis = d3.axisLeft(yScale).tickValues([30, 40, 50, 60, 70, 80]);
 
+    d3.selection.prototype.moveToBack = function () {
+      return this.each(function () {
+        var firstChild = this.parentNode.firstChild;
+        if (firstChild) {
+          this.parentNode.insertBefore(this, firstChild);
+        }
+      });
+    };
+
     svg
       .append("g")
       .attr("class", "xAxis")
@@ -123,6 +132,21 @@ d3.csv(
       .attr("transform", "translate(20, 30)")
       .text("Fatality");
 
+    yearLabel = svg
+      .append("text")
+      .attr("class", "year")
+      .attr("x", 60)
+      .attr("y", 620)
+      .attr("font-family", "Helvetica Neue, Arial")
+      .attr("font-weight", 500)
+      .attr("font-size", 80)
+      .text(1998)
+      .attr("fill", function (d) {
+        return d3.select(this).moveToBack();
+      })
+      .attr("fill", "#ccc");
+
+    //yearLabel.text(year);
     updateChart(1998);
   }
 );
@@ -206,8 +230,34 @@ d3.csv(
 //         updateChart(1952);
 //     });
 
+function setYear(year) {
+  yearLabel.text(year);
+}
+
 function updateChart(year) {
   // **** Update the chart based on the year here ****
+  // svg
+  //   .append("text")
+  //   .attr("x", 70)
+  //   .attr("font-family", "Helvetica Neue, Arial")
+  //   .attr("font-weight", 500)
+  //   .attr("font-size", 80)
+  //   .attr("y", 600)
+  //   .text(year)
+  //   .attr("alignment-baseline", "middle")
+  //   .attr("fill", function (d) {
+  //     return d3.select(this).moveToBack();
+  //   })
+  //   .attr("fill", function (d) {
+  //     d3.select(this).transition().duration(2000).style("opacity", 0);
+  //   })
+  //   .attr("fill", "#ccc");
+
+  // d3.selectAll("text").on("mouseover", function (d) {
+  //   d3.select(this).moveToBack();
+  // });
+
+  setYear(year);
 
   var tooltip = d3
     .select("#main")
