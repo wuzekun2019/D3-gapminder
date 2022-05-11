@@ -1,8 +1,8 @@
-**Due Sunday, April 1st, 11:55 pm**
 
-CS 4460 - Information Visualization - Fall 2017
 
-***
+Illustrative Visualization Final Project - Scatter plot
+
+Shahin Doroudian - Zekun Wu
 
 # Programming Assignment 3: Sliding GapMinder
 
