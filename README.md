@@ -8,7 +8,7 @@
 ### Chart:
 We used this dataset and mapped the data to a scatter plot. The scatter plot itself is developed by d3. User can browse through the data and change the year using a slider at the bottom of the chart. By pressing the Play button, the chart automatically goes through the years one by one to simulate a storytelling plot. In order to show the details of each bubble, users can mouse-over each bubble, a tooltip will pop up displaying the details. There is also a legend on the bottom showing the selected year. The chart also goes over a transition to show the new bubbles after changing the data.
 
-![Lab Result](img/p01.gif)
+![Lab Result](img/pic01.gif)
 
 <!-- In this assignment you will create a version of the bubble chart from [Hans Rosling's GapMinder storytelling video](https://www.ted.com/talks/hans_rosling_at_state). The bubble chart shows 142 countries. The chart shows the life expectancy compared to the GDP per capita for each country. An interactive version of the tool can be found on the [GapMinder website](http://www.gapminder.org/tools/#_chart-type=bubbles).
 
