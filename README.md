@@ -12,7 +12,7 @@ The focus of our project is to explore the change of the food born disease in di
 ### Chart:   
 The scatter plot itself is developed by d3. User can browse through the data and change the year using a slider at the bottom of the chart. By pressing the Play button, the chart automatically goes through the years one by one to simulate a storytelling plot. In order to show the details of each bubble, users can mouse-over each bubble, a tooltip will pop up displaying the details. There is also a legend on the bottom showing the selected year. The chart also goes over a transition to show the new bubbles after changing the data.
 
-In the visualization part, We user different colors to indicate states from different time zones (CTZ, ADTZ, MTZ, PTZ, ETZ and PTZ) and each state is presented with a bubble there. The bubble size is determined by the illness number. In the plot, each bubble's position is indicate in a hospitalization to fatility coordinates. Generally speking, the bubbles close to the right up position are considered as the state with severe foodborn disease.
+In the visualization part, We use different colors to indicate states from different time zones (CTZ, ADTZ, MTZ, PTZ, ETZ and PTZ) and each state is presented with a bubble in the chart. The bubble size is determined by the illness number. In the plot, each bubble's position is indicate in a hospitalization to fatility coordinates. Generally speaking, the bubbles close to the right-upper position are considered as the states with severe foodborn disease.
 
 <p align="center">
   <img src="img/pic01.gif">
