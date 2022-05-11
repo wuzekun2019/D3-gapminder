@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/css/bootstrap-slider.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    <div id="main">
+<body style="pad: 0px;">
+    
+    <div id="main" class="float-container">
+        
+        <div class="float-child">
+            <p style="padding-left: 10px;">Scatter Plot - Based on Time Zone</p>
         <svg width="1000" height="700" style="border: 1px solid #777;">
         <g class='legend' transform="translate(220, 20)">
             <g>
@@ -37,22 +41,22 @@
             </g>
         </g>
         </svg>
-    </div>
-    <div style="padding: 4px 30px;">
-        <input type="button" id="autoplay" value="Play" style="margin-right:6px;width: 80px;">
-        <label for="yearSlider" style="margin-right:6px;">1998</label>
-        <input type="range" name="yearSlider" id="yearSlider" min="1998" max="2015" value="1998" style="width: 800px;">
-        <!-- <input id="yearSlider" type="text" data-slider-min="1998" data-slider-max="2015" data-slider-step="1" data-slider-value="1998" style="width: 800px;"/> -->
-        <label for="yearSlider"  style="margin-left:6px;">2015</label>
+        <div style="padding: 4px 30px;">
+            <input type="button" id="autoplay" value="Play" style="margin-right:6px;width: 80px;">
+            <label for="yearSlider" style="margin-right:6px;">1998</label>
+            <input type="range" name="yearSlider" id="yearSlider" min="1998" max="2015" value="1998" style="width: 800px;">
+            <label for="yearSlider"  style="margin-left:6px;">2015</label>
+        </div>
     </div>
     
-    <hr>
-    <p style="padding-left: 10px;">Cluster</p>
-    <iframe src="secondchart.html" title="description" height="850" width="1155" frameBorder="0"></iframe>
+    <div style="pad: 0px;"  class="float-child">
+    <iframe src="secondchart.html" title="description" height="850" width="1100" frameBorder="0"></iframe>
     <br>
     <br>
     <br>
     <br>
+</div>
+</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

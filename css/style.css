@@ -36,7 +36,6 @@ label {
 }
 
 .float-child {
-    width: 50%;
     float: left;
     border: 0px;
 }  

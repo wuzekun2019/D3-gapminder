@@ -7,44 +7,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/css/bootstrap-slider.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    <div id="main">
+<body style="pad: 0px;">
+    <div style="pad: 0px;">
+        <p style="padding-left: 10px;">Scatter Plot - Based on Cluster</p>
         <svg width="1000" height="700" style="border: 1px solid #777;">
         <g class='legend' transform="translate(220, 20)">
             <g>
                 <circle r="8" cy="4" style="fill: #82e92d;"/>
-                <text x="14" dy="0.7em">CTZ</text>
+                <text x="14" dy="0.7em">0</text>
             </g>
             <g transform="translate(80)">
                 <circle r="8" cy="4" style="fill: #fee633;"/>
-                <text x="14" dy="0.7em">ADTZ</text>
+                <text x="14" dy="0.7em">1</text>
             </g>
             <g transform="translate(160)">
                 <circle r="8" cy="4" style="fill: #24d5e8;"/>
-                <text x="14" dy="0.7em"> MTZ</text>
+                <text x="14" dy="0.7em">2</text>
             </g>
             <g transform="translate(240)">
                 <circle r="8" cy="4" style="fill: #fc5a74;"/>
-                <text x="14" dy="0.7em">PTZ</text>
+                <text x="14" dy="0.7em">3</text>
             </g>
             <g transform="translate(320)">
                 <circle r="8" cy="4" style="fill: #477ce0;"/>
-                <text x="14" dy="0.7em">ETZ</text>
+                <text x="14" dy="0.7em">4</text>
             </g>
             <g transform="translate(400)">
                 <circle r="8" cy="4" style="fill: #b5654f;"/>
-                <text x="14" dy="0.7em">PTZ</text>
+                <text x="14" dy="0.7em">5</text>
             </g>
         </g>
         </svg>
+        <div style="padding: 4px 30px;">
+            <input type="button" id="autoplay" value="Play" style="margin-right:6px;width: 80px;">
+            <label for="yearSlider" style="margin-right:6px;">1998</label>
+            <input type="range" name="yearSlider" id="yearSlider" min="1998" max="2015" value="1998" style="width: 800px;">
+            <!-- <input id="yearSlider" type="text" data-slider-min="1998" data-slider-max="2015" data-slider-step="1" data-slider-value="1998" style="width: 800px;"/> -->
+            <label for="yearSlider"  style="margin-left:6px;">2015</label>
+        </div>
     </div>
-    <div style="padding: 4px 30px;">
-        <input type="button" id="autoplay" value="Play" style="margin-right:6px;width: 80px;">
-        <label for="yearSlider" style="margin-right:6px;">1998</label>
-        <input type="range" name="yearSlider" id="yearSlider" min="1998" max="2015" value="1998" style="width: 800px;">
-        <!-- <input id="yearSlider" type="text" data-slider-min="1998" data-slider-max="2015" data-slider-step="1" data-slider-value="1998" style="width: 800px;"/> -->
-        <label for="yearSlider"  style="margin-left:6px;">2015</label>
-    </div>
+    
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
