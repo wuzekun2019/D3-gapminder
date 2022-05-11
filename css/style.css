@@ -30,3 +30,13 @@ label {
     font-size: 12px;
     fill: #555;
 }
+
+.float-container {
+    border: 0px solid #fff;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    border: 0px;
+}  
