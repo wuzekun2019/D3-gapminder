@@ -18,6 +18,15 @@ var tmzColors = {
   HSTZ: "#b5654f",
 };
 
+var clusterColors = {
+  0: "#fc5a74",
+  1: "#fee633",
+  2: "#24d5e8",
+  3: "#82e92d",
+  4: "#477ce0",
+  5: "#b5654f",
+}
+
 var svg = d3.select("svg");
 
 var svgWidth = +svg.attr("width");
@@ -315,7 +324,7 @@ function updateChart(year) {
       return rScale(d.illness);
     })
     .style("fill", function (d) {
-      return tmzColors[d.cluster];
+      return clusterColors[d.cluster];
     })
     .style("stroke", "#00");
 
