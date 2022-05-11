@@ -11,7 +11,6 @@
 // });
 
 // Color mapping based on continents
-//Shahin
 
 var autoPlayStatus = true;
 
