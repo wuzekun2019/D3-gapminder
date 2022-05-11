@@ -5,9 +5,12 @@
 ### Shahin Doroudian - Zekun Wu
 
 
-### Instructions
+### Chart:
+We used this dataset and mapped the data to a scatter plot. The scatter plot itself is developed by d3. User can browse through the data and change the year using a slider at the bottom of the chart. By pressing the Play button, the chart automatically goes through the years one by one to simulate a storytelling plot. In order to show the details of each bubble, users can mouse-over each bubble, a tooltip will pop up displaying the details. There is also a legend on the bottom showing the selected year. The chart also goes over a transition to show the new bubbles after changing the data.
 
-In this assignment you will create a version of the bubble chart from [Hans Rosling's GapMinder storytelling video](https://www.ted.com/talks/hans_rosling_at_state). The bubble chart shows 142 countries. The chart shows the life expectancy compared to the GDP per capita for each country. An interactive version of the tool can be found on the [GapMinder website](http://www.gapminder.org/tools/#_chart-type=bubbles).
+![Lab Result](img/p01.gif)
+
+<!-- In this assignment you will create a version of the bubble chart from [Hans Rosling's GapMinder storytelling video](https://www.ted.com/talks/hans_rosling_at_state). The bubble chart shows 142 countries. The chart shows the life expectancy compared to the GDP per capita for each country. An interactive version of the tool can be found on the [GapMinder website](http://www.gapminder.org/tools/#_chart-type=bubbles).
 
 Your chart will be interactive. It must update to show the data for each 5-year interval. We have already added a slider that will control the current year for the chart. Your submission should update with the slider as seen below:
 
@@ -82,4 +85,4 @@ You will not **lose points** on any of the following:
 **Extra Credit (upto 10 points)**
 
 1. Add a tooltip to each of the country bubbles. It should display the `country`, `lifeExp` and `gdpPercap`. **(5 points)**
-2. Create a dropdown menu which contains all the continents (Asia, Europe, Africa, Americas). On selection of an item from the dropdown, the chart must display bubbles belonging to that continent. The dropdown must also contain an option 'All' which displays all the continents. **(5 points)**
+2. Create a dropdown menu which contains all the continents (Asia, Europe, Africa, Americas). On selection of an item from the dropdown, the chart must display bubbles belonging to that continent. The dropdown must also contain an option 'All' which displays all the continents. **(5 points)** -->
