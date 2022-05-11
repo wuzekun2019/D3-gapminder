@@ -2,9 +2,8 @@
 
 # Illustrative Visualization Final Project - Scatter plot
 
-Shahin Doroudian - Zekun Wu
+### Shahin Doroudian - Zekun Wu
 
-# Programming Assignment 3: Sliding GapMinder
 
 ### Instructions
 
