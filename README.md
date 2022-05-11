@@ -1,6 +1,6 @@
 
 
-Illustrative Visualization Final Project - Scatter plot
+# Illustrative Visualization Final Project - Scatter plot
 
 Shahin Doroudian - Zekun Wu
 
