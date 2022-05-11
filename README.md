@@ -5,11 +5,8 @@
 ### Shahin Doroudian - Zekun Wu
 
 
-### Chart:
-<div style="text-align: justify">
-    
-We used this dataset and mapped the data to a scatter plot. The scatter plot itself is developed by d3. User can browse through the data and change the year using a slider at the bottom of the chart. By pressing the Play button, the chart automatically goes through the years one by one to simulate a storytelling plot. In order to show the details of each bubble, users can mouse-over each bubble, a tooltip will pop up displaying the details. There is also a legend on the bottom showing the selected year. The chart also goes over a transition to show the new bubbles after changing the data.
-</div>
+### Chart:   
+We used <a href="https://www.kaggle.com/code/emonte/pattern-of-food-borne-disease-outbreaks/data">this</a> dataset and mapped the data to a scatter plot. The scatter plot itself is developed by d3. User can browse through the data and change the year using a slider at the bottom of the chart. By pressing the Play button, the chart automatically goes through the years one by one to simulate a storytelling plot. In order to show the details of each bubble, users can mouse-over each bubble, a tooltip will pop up displaying the details. There is also a legend on the bottom showing the selected year. The chart also goes over a transition to show the new bubbles after changing the data.
 
 <p align="center">
   <img src="img/pic01.gif">
